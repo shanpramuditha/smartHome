@@ -17,7 +17,9 @@ void setup() {
 }
 
 void loop() {
-
+//  bulbController::beep();
   wifiController::wait(server);  
+
+//  Serial.println(strncmp("sa","sdf",2));
 
 }
