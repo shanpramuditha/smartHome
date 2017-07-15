@@ -18,30 +18,42 @@ inline void commandAnalyzer(char cmd[]) {
     bulbController::offRelay();
     bulbController::beep();
   }
-  else if (isEqual(cmd, "/AC/NEC/ON")==0) {
-    irController::sendCommand(1, 1, 1); //value have to be replaced
+  else if (isEqual(cmd, "/AC/NEC/ONOFF")==0) {
+    irController::sendCommand(1, 0); 
   }
-  else if (isEqual(cmd, "/AC/NEC/OFF")==0) {
-    irController::sendCommand(1, 0, 0); //value have to be replaced
+  else if (isEqual(cmd, "/AC/NEC/UP")==0) {
+    irController::sendCommand(1, 1); 
   }
-  else if (isEqual(cmd, "/AC/SONY/ON")) {
-    irController::sendCommand(2, 1, 1); //value have to be replaced
+  else if (isEqual(cmd, "/AC/NEC/DOWN")==0) {
+    irController::sendCommand(1, 2); 
   }
-  else if (isEqual(cmd, "/AC/SONY/OFF")) {
-    irController::sendCommand(2, 0, 0); //value have to be replaced
+  else if (isEqual(cmd, "/AC/SONY/ONOFF")) {
+    irController::sendCommand(2, 0); 
   }
-  else if (isEqual(cmd, "/AC/SAMSUNG/ON")) {
-    irController::sendCommand(3, 1, 1); //value have to be replaced
+  else if (isEqual(cmd, "/AC/SONY/UP")) {
+    irController::sendCommand(2, 1); 
   }
-  else if (isEqual(cmd, "/AC/SAMSUNG/OFF")) {
-    irController::sendCommand(3, 0, 0); //value have to be replaced
+  else if (isEqual(cmd, "/AC/SONY/DOWN")) {
+    irController::sendCommand(2, 2); 
   }
-  else if (isEqual(cmd, "/AC/SHARP/ON")) {
-    irController::sendCommand(4, 1, 1); //value have to be replaced
+  else if (isEqual(cmd, "/AC/SAMSUNG/ONOFF")) {
+    irController::sendCommand(3, 0); 
   }
-  else if (isEqual(cmd, "/AC/SHARP/OFF")) {
-    irController::sendCommand(4, 0, 0); //value have to be replaced
-  } else {
+  else if (isEqual(cmd, "/AC/SAMSUNG/UP")) {
+    irController::sendCommand(3, 1); 
+  }
+  else if (isEqual(cmd, "/AC/SAMSUNG/DOWN")) {
+    irController::sendCommand(3, 2); 
+  }
+  else if (isEqual(cmd, "/AC/LG/ONOFF")) {
+    irController::sendCommand(4, 0); 
+  }
+  else if (isEqual(cmd, "/AC/LG/UP")) {
+    irController::sendCommand(4, 1); 
+  }
+  else if (isEqual(cmd, "/AC/LG/DOWN")) {
+    irController::sendCommand(4, 2); 
+  }else {
     Serial.println("other");
     //do something
   }
