@@ -17,7 +17,7 @@ inline void successResponse(WiFiClient client) {
     "Connection: close");  // the connection will be closed after completion of the response
   client.println();
   client.println("<!DOCTYPE HTML><html>");
-  client.println("OPTIONS: RED BLUE<br></html>");
+  client.println("<h1>Welcome to the Smart Home</html>");
 
 }
 
