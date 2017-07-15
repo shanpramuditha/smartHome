@@ -15,13 +15,8 @@ inline void onRelay() {
 }
 
 inline void offRelay() {
-  Serial.println(digitalRead(RELAY));
-  
-  Serial.println(!digitalRead(RELAY));
   pinMode(RELAY, OUTPUT);
   digitalWrite(RELAY, 0);
-  
-  Serial.println(digitalRead(RELAY));
 }
 
   inline void setRelay(bool b){

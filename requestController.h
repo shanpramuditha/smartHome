@@ -31,39 +31,39 @@ inline void commandAnalyzer(char cmd[]) {
     irController::sendCommand(1, 2);
     bulbController::beep(); 
   }
-  else if (isEqual(cmd, "/AC/SONY/ONOFF")) {
+  else if (isEqual(cmd, "/AC/SONY/ONOFF")==0) {
     irController::sendCommand(2, 0);
     bulbController::beep(); 
   }
-  else if (isEqual(cmd, "/AC/SONY/UP")) {
+  else if (isEqual(cmd, "/AC/SONY/UP")==0) {
     irController::sendCommand(2, 1);
     bulbController::beep(); 
   }
-  else if (isEqual(cmd, "/AC/SONY/DOWN")) {
+  else if (isEqual(cmd, "/AC/SONY/DOWN")==0) {
     irController::sendCommand(2, 2); 
     bulbController::beep();
   }
-  else if (isEqual(cmd, "/AC/SAMSUNG/ONOFF")) {
+  else if (isEqual(cmd, "/AC/SAMSUNG/ONOFF")==0) {
     irController::sendCommand(3, 0);
     bulbController::beep(); 
   }
-  else if (isEqual(cmd, "/AC/SAMSUNG/UP")) {
+  else if (isEqual(cmd, "/AC/SAMSUNG/UP")==0) {
     irController::sendCommand(3, 1); 
     bulbController::beep();
   }
-  else if (isEqual(cmd, "/AC/SAMSUNG/DOWN")) {
+  else if (isEqual(cmd, "/AC/SAMSUNG/DOWN")==0) {
     irController::sendCommand(3, 2); 
     bulbController::beep();
   }
-  else if (isEqual(cmd, "/AC/LG/ONOFF")) {
+  else if (isEqual(cmd, "/AC/LG/ONOFF")==0) {
     irController::sendCommand(4, 0); 
     bulbController::beep();
   }
-  else if (isEqual(cmd, "/AC/LG/UP")) {
+  else if (isEqual(cmd, "/AC/LG/UP")==0) {
     irController::sendCommand(4, 1);
     bulbController::beep(); 
   }
-  else if (isEqual(cmd, "/AC/LG/DOWN")) {
+  else if (isEqual(cmd, "/AC/LG/DOWN")==0) {
     irController::sendCommand(4, 2);
     bulbController::beep(); 
   }else {
